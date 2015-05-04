@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://coupangzone.coupang.net/ -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>COUPANG ZONE</title>
+	<link rel="shortcut icon" href="http://coupangzone.coupang.net/resources/20150425172257_c17c3d64/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./COUPANG ZONE_files/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./COUPANG ZONE_files/common.css" type="text/css">
+    <link rel="stylesheet" href="./COUPANG ZONE_files/sticky-footer.css" type="text/css">
+    <link rel="stylesheet" href="./COUPANG ZONE_files/jquery.fileupload.css" type="text/css">
+    <link rel="stylesheet" href="./COUPANG ZONE_files/image.css" type="text/css">
+    <link rel="stylesheet" href="./COUPANG ZONE_files/daterangepicker-bs2.css" type="text/css">
+    <link rel="stylesheet" href="./COUPANG ZONE_files/daterangepicker-bs3.css" type="text/css">
+    <link rel="stylesheet" href="./COUPANG ZONE_files/searchDate.css" type="text/css">
+
+    <link rel="stylesheet" href="./COUPANG ZONE_files/file-validator.css" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="./COUPANG ZONE_files/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/validation.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/imageUpload.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/moment.min.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/daterangepicker.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/selectDays.js" type="text/javascript"></script>
+
+    <script src="./COUPANG ZONE_files/file-validator.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/app.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/onClick.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/excel.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/bootstrap.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/login.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/notify.js" type="text/javascript"></script><style type="text/css" id="notify-bootstrap">.notifyjs-bootstrap-base {
+  font-weight: bold;
+  padding: 8px 15px 8px 14px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: nowrap;
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-position: 3px 7px;
+}
+.notifyjs-bootstrap-error {
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border-color: #EED3D7;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNqkVc1u00AQHq+dOD+0poIQfkIjalW0SEGqRMuRnHos3DjwAH0ArlyQeANOOSMeAA5VjyBxKBQhgSpVUKKQNGloFdw4cWw2jtfMOna6JOUArDTazXi/b3dm55socPqQhFka++aHBsI8GsopRJERNFlY88FCEk9Yiwf8RhgRyaHFQpPHCDmZG5oX2ui2yilkcTT1AcDsbYC1NMAyOi7zTX2Agx7A9luAl88BauiiQ/cJaZQfIpAlngDcvZZMrl8vFPK5+XktrWlx3/ehZ5r9+t6e+WVnp1pxnNIjgBe4/6dAysQc8dsmHwPcW9C0h3fW1hans1ltwJhy0GxK7XZbUlMp5Ww2eyan6+ft/f2FAqXGK4CvQk5HueFz7D6GOZtIrK+srupdx1GRBBqNBtzc2AiMr7nPplRdKhb1q6q6zjFhrklEFOUutoQ50xcX86ZlqaZpQrfbBdu2R6/G19zX6XSgh6RX5ubyHCM8nqSID6ICrGiZjGYYxojEsiw4PDwMSL5VKsC8Yf4VRYFzMzMaxwjlJSlCyAQ9l0CW44PBADzXhe7xMdi9HtTrdYjFYkDQL0cn4Xdq2/EAE+InCnvADTf2eah4Sx9vExQjkqXT6aAERICMewd/UAp/IeYANM2joxt+q5VI+ieq2i0Wg3l6DNzHwTERPgo1ko7XBXj3vdlsT2F+UuhIhYkp7u7CarkcrFOCtR3H5JiwbAIeImjT/YQKKBtGjRFCU5IUgFRe7fF4cCNVIPMYo3VKqxwjyNAXNepuopyqnld602qVsfRpEkkz+GFL1wPj6ySXBpJtWVa5xlhpcyhBNwpZHmtX8AGgfIExo0ZpzkWVTBGiXCSEaHh62/PoR0p/vHaczxXGnj4bSo+G78lELU80h1uogBwWLf5YlsPmgDEd4M236xjm+8nm4IuE/9u+/PH2JXZfbwz4zw1WbO+SQPpXfwG/BBgAhCNZiSb/pOQAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border-color: #D6E9C6;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAutJREFUeNq0lctPE0Ecx38zu/RFS1EryqtgJFA08YCiMZIAQQ4eRG8eDGdPJiYeTIwHTfwPiAcvXIwXLwoXPaDxkWgQ6islKlJLSQWLUraPLTv7Gme32zoF9KSTfLO7v53vZ3d/M7/fIth+IO6INt2jjoA7bjHCJoAlzCRw59YwHYjBnfMPqAKWQYKjGkfCJqAF0xwZjipQtA3MxeSG87VhOOYegVrUCy7UZM9S6TLIdAamySTclZdYhFhRHloGYg7mgZv1Zzztvgud7V1tbQ2twYA34LJmF4p5dXF1KTufnE+SxeJtuCZNsLDCQU0+RyKTF27Unw101l8e6hns3u0PBalORVVVkcaEKBJDgV3+cGM4tKKmI+ohlIGnygKX00rSBfszz/n2uXv81wd6+rt1orsZCHRdr1Imk2F2Kob3hutSxW8thsd8AXNaln9D7CTfA6O+0UgkMuwVvEFFUbbAcrkcTA8+AtOk8E6KiQiDmMFSDqZItAzEVQviRkdDdaFgPp8HSZKAEAL5Qh7Sq2lIJBJwv2scUqkUnKoZgNhcDKhKg5aH+1IkcouCAdFGAQsuWZYhOjwFHQ96oagWgRoUov1T9kRBEODAwxM2QtEUl+Wp+Ln9VRo6BcMw4ErHRYjH4/B26AlQoQQTRdHWwcd9AH57+UAXddvDD37DmrBBV34WfqiXPl61g+vr6xA9zsGeM9gOdsNXkgpEtTwVvwOklXLKm6+/p5ezwk4B+j6droBs2CsGa/gNs6RIxazl4Tc25mpTgw/apPR1LYlNRFAzgsOxkyXYLIM1V8NMwyAkJSctD1eGVKiq5wWjSPdjmeTkiKvVW4f2YPHWl3GAVq6ymcyCTgovM3FzyRiDe2TaKcEKsLpJvNHjZgPNqEtyi6mZIm4SRFyLMUsONSSdkPeFtY1n0mczoY3BHTLhwPRy9/lzcziCw9ACI+yql0VLzcGAZbYSM5CCSZg1/9oc/nn7+i8N9p/8An4JMADxhH+xHfuiKwAAAABJRU5ErkJggg==);
+}
+.notifyjs-bootstrap-info {
+  color: #3A87AD;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFAhkSsdes/QAAA8dJREFUOMvVlGtMW2UYx//POaWHXg6lLaW0ypAtw1UCgbniNOLcVOLmAjHZolOYlxmTGXVZdAnRfXQm+7SoU4mXaOaiZsEpC9FkiQs6Z6bdCnNYruM6KNBw6YWewzl9z+sHImEWv+vz7XmT95f/+3/+7wP814v+efDOV3/SoX3lHAA+6ODeUFfMfjOWMADgdk+eEKz0pF7aQdMAcOKLLjrcVMVX3xdWN29/GhYP7SvnP0cWfS8caSkfHZsPE9Fgnt02JNutQ0QYHB2dDz9/pKX8QjjuO9xUxd/66HdxTeCHZ3rojQObGQBcuNjfplkD3b19Y/6MrimSaKgSMmpGU5WevmE/swa6Oy73tQHA0Rdr2Mmv/6A1n9w9suQ7097Z9lM4FlTgTDrzZTu4StXVfpiI48rVcUDM5cmEksrFnHxfpTtU/3BFQzCQF/2bYVoNbH7zmItbSoMj40JSzmMyX5qDvriA7QdrIIpA+3cdsMpu0nXI8cV0MtKXCPZev+gCEM1S2NHPvWfP/hL+7FSr3+0p5RBEyhEN5JCKYr8XnASMT0xBNyzQGQeI8fjsGD39RMPk7se2bd5ZtTyoFYXftF6y37gx7NeUtJJOTFlAHDZLDuILU3j3+H5oOrD3yWbIztugaAzgnBKJuBLpGfQrS8wO4FZgV+c1IxaLgWVU0tMLEETCos4xMzEIv9cJXQcyagIwigDGwJgOAtHAwAhisQUjy0ORGERiELgG4iakkzo4MYAxcM5hAMi1WWG1yYCJIcMUaBkVRLdGeSU2995TLWzcUAzONJ7J6FBVBYIggMzmFbvdBV44Corg8vjhzC+EJEl8U1kJtgYrhCzgc/vvTwXKSib1paRFVRVORDAJAsw5FuTaJEhWM2SHB3mOAlhkNxwuLzeJsGwqWzf5TFNdKgtY5qHp6ZFf67Y/sAVadCaVY5YACDDb3Oi4NIjLnWMw2QthCBIsVhsUTU9tvXsjeq9+X1d75/KEs4LNOfcdf/+HthMnvwxOD0wmHaXr7ZItn2wuH2SnBzbZAbPJwpPx+VQuzcm7dgRCB57a1uBzUDRL4bfnI0RE0eaXd9W89mpjqHZnUI5Hh2l2dkZZUhOqpi2qSmpOmZ64Tuu9qlz/SEXo6MEHa3wOip46F1n7633eekV8ds8Wxjn37Wl63VVa+ej5oeEZ/82ZBETJjpJ1Rbij2D3Z/1trXUvLsblCK0XfOx0SX2kMsn9dX+d+7Kf6h8o4AIykuffjT8L20LU+w4AZd5VvEPY+XpWqLV327HR7DzXuDnD8r+ovkBehJ8i+y8YAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-warn {
+  color: #C09853;
+  background-color: #FCF8E3;
+  border-color: #FBEED5;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABJlBMVEXr6eb/2oD/wi7/xjr/0mP/ykf/tQD/vBj/3o7/uQ//vyL/twebhgD/4pzX1K3z8e349vK6tHCilCWbiQymn0jGworr6dXQza3HxcKkn1vWvV/5uRfk4dXZ1bD18+/52YebiAmyr5S9mhCzrWq5t6ufjRH54aLs0oS+qD751XqPhAybhwXsujG3sm+Zk0PTwG6Shg+PhhObhwOPgQL4zV2nlyrf27uLfgCPhRHu7OmLgAafkyiWkD3l49ibiAfTs0C+lgCniwD4sgDJxqOilzDWowWFfAH08uebig6qpFHBvH/aw26FfQTQzsvy8OyEfz20r3jAvaKbhgG9q0nc2LbZxXanoUu/u5WSggCtp1anpJKdmFz/zlX/1nGJiYmuq5Dx7+sAAADoPUZSAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfdBgUBGhh4aah5AAAAlklEQVQY02NgoBIIE8EUcwn1FkIXM1Tj5dDUQhPU502Mi7XXQxGz5uVIjGOJUUUW81HnYEyMi2HVcUOICQZzMMYmxrEyMylJwgUt5BljWRLjmJm4pI1hYp5SQLGYxDgmLnZOVxuooClIDKgXKMbN5ggV1ACLJcaBxNgcoiGCBiZwdWxOETBDrTyEFey0jYJ4eHjMGWgEAIpRFRCUt08qAAAAAElFTkSuQmCC);
+}
+</style>
+    <script src="./COUPANG ZONE_files/updateUserType.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/paste.js" type="text/javascript"></script>
+    <script src="./COUPANG ZONE_files/menuSelect.js" type="text/javascript"></script>
+<link rel="stylesheet" href="./COUPANG ZONE_files/userwebheader.css" type="text/css"><link rel="stylesheet" href="./COUPANG ZONE_files/justified-nav.css" type="text/css"><style type="text/css" id="core-notify">.notifyjs-corner {
+  position: fixed;
+  margin: 5px;
+  z-index: 1050;
+}
+
+.notifyjs-corner .notifyjs-wrapper,
+.notifyjs-corner .notifyjs-container {
+  position: relative;
+  display: block;
+  height: inherit;
+  width: inherit;
+  margin: 3px;
+}
+
+.notifyjs-wrapper {
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  height: 0;
+  width: 0;
+}
+
+.notifyjs-container {
+  display: none;
+  z-index: 1;
+  position: absolute;
+}
+
+.notifyjs-hidable {
+  cursor: pointer;
+}
+
+[data-notify-text],[data-notify-html] {
+  position: relative;
+}
+
+.notifyjs-arrow {
+  position: absolute;
+  z-index: 2;
+  width: 0;
+  height: 0;
+}</style></head>
+
+
+<body>
+<div class="container">
+    <div class="text-center mgt4">
+        <a href="./COUPANG ZONE_files/COUPANG ZONE.html"><img src="./COUPANG ZONE_files/user_head.png" style="max-width: 22%; height: auto;"></a>
+    </div>
+    <div class="text-right">
+        <span>크레타팀 박성진님</span>
+	    <button id="adminBtn" type="button" class="btn btn-default btn-sm">관리자 페이지</button>
+	    <button id="logoutBtn" type="button" class="btn btn-default btn-sm">LOG OUT</button>
+    </div>
+    <div class="mgt2">
+        <ul class="nav nav-justified">
+            <li class="inProgressAuctionMenu active"><a href="./COUPANG ZONE_files/COUPANG ZONE.html" style="font-size: 1.6em; color: #ffffff;">입찰중인 상품</a></li>
+            <li class="myBiddingMenu"><a href="http://coupangzone.coupang.net/auctions/biddings" style="font-size: 1.6em; color: #ffffff;">나의 입찰내역</a></li>
+            <li class="mySuccessfulBidMenu"><a href="http://coupangzone.coupang.net/auctions/successes" style="font-size: 1.6em; color: #ffffff;">나의 낙찰내역</a></li>
+            <li class="auctionHistoryMenu"><a href="http://coupangzone.coupang.net/auctions/history" style="font-size: 1.6em; color: #ffffff;">과거 상품</a></li>
+        </ul>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        
+        
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/d835863d68_thumbnail.png" alt="맛밤80g * 9봉" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">맛밤80g * 9봉</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 17,940원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 10,700원</h4>
+                    <h4 data-auctionidatmain="3530">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3530" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/f5286de0869dbd9ee0ee580b6160c001b268e99ab854417feb380e897b54fd11_thumbnail.png" alt="북어국 56g *5개" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">북어국 56g *5개</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 5,950원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 3,500원</h4>
+                    <h4 data-auctionidatmain="3531">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3531" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/cc880ceb04_thumbnail.png" alt="아몬드 푸레이크 630g *3개" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">아몬드 푸레이크 630g *3개</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 20,700원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 12,400원</h4>
+                    <h4 data-auctionidatmain="3532">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3532" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/4692d39e9c_thumbnail.png" alt="오곡 첵스 2종" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">오곡 첵스 2종</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 19,600원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 11,600원</h4>
+                    <h4 data-auctionidatmain="3533">현재가 - 11,700원</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3533" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/1c8a708205_thumbnail.png" alt="롯데 크림몽쉘 384g *6개" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">롯데 크림몽쉘 384g *6개</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 17,940원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 10,700원</h4>
+                    <h4 data-auctionidatmain="3534">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3534" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/f94b213766_thumbnail.png" alt="페레로로쉐_콜렉션T32" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">페레로로쉐_콜렉션T32</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 22,200원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 13,300원</h4>
+                    <h4 data-auctionidatmain="3535">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3535" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/1f22211c21_thumbnail.png" alt="로아커 나폴리타너 *9개 +프링글스 3종" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">로아커 나폴리타너 *9개 +프링글스 3종</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 14,250원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 8,400원</h4>
+                    <h4 data-auctionidatmain="3536">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3536" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/bb8edea0aef0236b4bfa6994e80b070d3aa84bcdd775b81afc50ef8dd383d7b0_thumbnail.png" alt="웰치스 믹스 젤리 *2개" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">웰치스 믹스 젤리 *2개</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 34,000원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 17,000원</h4>
+                    <h4 data-auctionidatmain="3537">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3537" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/077f4597d9_thumbnail.png" alt="하리보_골드바렌통_980G" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">하리보_골드바렌통_980G</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 13,700원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 8,200원</h4>
+                    <h4 data-auctionidatmain="3538">현재가 - 8,300원</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3538" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/46b2fdeadb_thumbnail.png" alt="키스미 히로인 메이크 볼륨앤컬 마스카라 P (메가블랙) 6g *2개" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">키스미 히로인 메이크 볼륨앤컬 마스카라 P (메가블랙) 6g *2개</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 19,800원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 11,800원</h4>
+                    <h4 data-auctionidatmain="3539">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3539" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/eb7d0bed69_thumbnail.png" alt="피지오겔크림 150ml" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">피지오겔크림 150ml</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 32,900원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 19,700원</h4>
+                    <h4 data-auctionidatmain="3540">현재가 - 19,900원</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3540" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/49fcb0e034e6ec1a2f746015dd039a51890faf6d82ba61c082296f6e1d8f7d68_thumbnail.png" alt="키스미 히로인 메이크 롱앤컬 마스카라 P (메가블랙) 6g *2개" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">키스미 히로인 메이크 롱앤컬 마스카라 P (메가블랙) 6g *2개</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 19,800원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 11,800원</h4>
+                    <h4 data-auctionidatmain="3541">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3541" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/b4f9e25a2f_thumbnail.png" alt="히말라야 너리싱 스킨 크림 50ml *2개" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">히말라야 너리싱 스킨 크림 50ml *2개</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 19,400원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 11,600원</h4>
+                    <h4 data-auctionidatmain="3542">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3542" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/b51a3a61dd_thumbnail.png" alt="마더케이 스마트스텝 2단계 손얼굴물티슈 20매*20개" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">마더케이 스마트스텝 2단계 손얼굴물티슈 20매*20개</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 15,000원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 9,000원</h4>
+                    <h4 data-auctionidatmain="3543">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3543" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/6518a3e450f7b33822de68da00344b6a46ace98ded2def847de6de59e8784859_thumbnail.png" alt="몰펀주니어500" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">몰펀주니어500</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 80,500원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 48,300원</h4>
+                    <h4 data-auctionidatmain="3544">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3544" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/5c7949a795_thumbnail.png" alt="[치코]3단변신 아기소파 - 트위스트암체어 (퍼플)" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">[치코]3단변신 아기소파 - 트위스트암체어 (퍼플)</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 55,000원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 33,000원</h4>
+                    <h4 data-auctionidatmain="3545">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3545" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/21fee76ea1_thumbnail.png" alt="또봇 Big 문구세트" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">또봇 Big 문구세트</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 16,000원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 9,600원</h4>
+                    <h4 data-auctionidatmain="3546">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3546" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/760bf943b7_thumbnail.png" alt="헬로에브리바디 베리 선물세트" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">헬로에브리바디 베리 선물세트</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 27,000원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 16,200원</h4>
+                    <h4 data-auctionidatmain="3547">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3547" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/0150a3d674_thumbnail.png" alt="세타필 모이스춰라이징 로션 591ml*2개" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">세타필 모이스춰라이징 로션 591ml*2개</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 26,000원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 15,600원</h4>
+                    <h4 data-auctionidatmain="3548">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3548" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/a970697670b9f4ed61c3c2b6beec9dfc5f4c89d28312fbd9be61709dda442f5f_thumbnail.png" alt="밸리수 아르간 오일 200ml" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">밸리수 아르간 오일 200ml</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 29,800원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 17,900원</h4>
+                    <h4 data-auctionidatmain="3549">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3549" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/7fe46bd30b_thumbnail.png" alt="73.Derma E Hyaluronic Acid Day Creme - 2 oz" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">73.Derma E Hyaluronic Acid Day Creme - 2 oz</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 26,000원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 15,600원</h4>
+                    <h4 data-auctionidatmain="3550">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3550" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/c088058bdc_thumbnail.png" alt="썬터치 훼미리 사각ST-3000P" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">썬터치 훼미리 사각ST-3000P</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 17,900원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 10,700원</h4>
+                    <h4 data-auctionidatmain="3552">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3552" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/6fa9f9c2222f036636b57d462c5c44f5c69d2769ab014c6d07c861ce492ed5c3_thumbnail.png" alt="[무스텔라] 피지오 베베 300ml" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">[무스텔라] 피지오 베베 300ml</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 16,900원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 10,100원</h4>
+                    <h4 data-auctionidatmain="3553">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3553" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/6fb98e0413_thumbnail.png" alt="랑방 에끌라 드 아르페쥬 EDP 30ml" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">랑방 에끌라 드 아르페쥬 EDP 30ml</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 45,000원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 27,000원</h4>
+                    <h4 data-auctionidatmain="3554">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3554" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/7ef6b78b88_thumbnail.png" alt="크리니크 모이스춰 썰스트 릴리프 75ml" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">크리니크 모이스춰 썰스트 릴리프 75ml</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 44,200원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 26,500원</h4>
+                    <h4 data-auctionidatmain="3555">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3555" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/0aa8759f03c5eea9eb9d70604acac9561176f53a694249bf52d676a224b6aee9_thumbnail.png" alt="수분아 수분크림 600ml" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">수분아 수분크림 600ml</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 16,800원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 10,000원</h4>
+                    <h4 data-auctionidatmain="3556">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3556" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/c8d8a2bac53928652e6b3f646ab73843d6ab1e0cf34d77774c3ddcb95cbeb947_thumbnail.png" alt="없었던일로 30일분" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">없었던일로 30일분</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 19,800원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 11,800원</h4>
+                    <h4 data-auctionidatmain="3557">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3557" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 thumbnail">
+                    <div class="mobile-div text-center" style="width: 100%; height: 350px; line-height: 350px;">
+		                <img class="img-rounded list-image" src="./COUPANG ZONE_files/a3313f9b1d_thumbnail.png" alt="티 포르테_케이티 브루잉_워밍 스파이스" style="vertical-align: middle;">
+                    </div>
+                    <h6 class="mobile-itemName">티 포르테_케이티 브루잉_워밍 스파이스</h6>
+                    <h4 class="mobile-originalPrice">쿠팡가 - 37,300원</h4>
+                    <h4 class="mobile-startPrice">시작가 - 22,300원</h4>
+                    <h4 data-auctionidatmain="3558">현재가 - 입찰 내역이 없습니다</h4>
+                    <h5 class="mobile-endDate">2015-05-04 14:00:00 마감</h5>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button class="btn btn-lg mobile-btn" data-toggle="modal" data-target="#myModal" data-auctionid="3558" style="background-color: #1890FB; color: #ffffff;">상세보기</button>
+                    </div>
+                </div>
+            
+        
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog mobile-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">쿠팡존 입찰!</h4>
+            </div>
+            <div class="modal-body mobile-modal-body">
+                <div class="row">
+                    <img id="modal-img" class="img-rounded" alt="" style="width: 588px; height: auto;">
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="itemName">상품 이름</h5>
+                        <h4 class="col-sm-10" id="itemName"></h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="itemOption">상품 옵션</h5>
+                        <pre class="col-sm-10" id="itemOption" style="background-color: #ffffff; border: 0px"></pre>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="itemUrl">URL</h5>
+                        <a class="col-sm-9 nounderline" id="itemUrl" target="_blank"><h5 id="itemUrlName" style="word-break:break-all"></h5></a>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="remark">비고</h5>
+                        <h4 class="col-sm-10" id="remark"></h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="startPrice">시작가</h5>
+                        <h4 class="col-sm-10" id="startPrice"></h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="endDate">마감시간</h5>
+                        <h4 class="col-sm-10" id="endDate"></h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="bidCount">총 입찰수</h5>
+                        <h4 class="col-sm-10" id="bidCount"></h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="bidderName">현 입찰자</h5>
+                        <h4 class="col-sm-10" id="bidderName"></h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="nowPrice">현재가</h5>
+                        <h4 class="col-sm-10" id="nowPrice"></h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label" for="bidPrice">입찰가</h5>
+                        <h4 class="col-sm-10" id="bidPrice"></h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5 class="col-sm-2 control-label">입찰하기</h5>
+                        <button type="button" class="btn btn-lg" id="bidPrice-reset" style="background-color: #106DC0; color:#ffffff;">초기화</button>
+                        <button type="button" class="btn btn-lg" id="bidPrice-100" style="background-color: #1890FB; color:#ffffff;">+100원</button>
+                        <button type="button" class="btn btn-lg" id="bidPrice-300" style="background-color: #1890FB; color:#ffffff;">+300원</button>
+                        <button type="button" class="btn btn-lg" id="bidPrice-500" style="background-color: #1890FB; color:#ffffff;">+500원</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-lg" id="refreshBtn" style="background-color: #106DC0; color:#ffffff;">REFRESH</button>
+                <button type="button" class="btn btn-lg" data-dismiss="modal" style="background-color: #1890FB; color:#ffffff;">닫기</button>
+                <button type="button" class="btn btn-lg notify" id="bidBtn" style="background-color: #1890FB; color:#ffffff;">입찰하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./COUPANG ZONE_files/index.js" type="text/javascript"></script>
+<script src="./COUPANG ZONE_files/mobile.js" type="text/javascript"></script>
+<div class="footer no-padding-top">
+	<div class="container">
+		<p class="text-muted text-center">
+			<span class="text-info">Copyright ⓒ Forward Ventures co.,Ltd. All Rights Reserved.</span><br>
+			Contact us: <a href="mailto:coupangzone@coupang.com">coupangzone@coupang.com</a>
+		</p>
+	</div>
+</div>
+
+</body></html>
